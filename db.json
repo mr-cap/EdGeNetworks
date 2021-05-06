@@ -1,0 +1,22 @@
+{
+  "States": [{
+    "id": 1,
+    "name": "Karnataka"
+  },
+  {
+    "id": 2,
+    "name": "Tamil Nadu"
+  },
+  {
+    "id": 3,
+    "name": "Goa"
+  },
+  {
+    "id": 4,
+    "name": "Kerala"
+  },
+  {
+    "id": 5,
+    "name": "AndraPradesh"
+  }]
+}

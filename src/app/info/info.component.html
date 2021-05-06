@@ -1,0 +1,42 @@
+
+<div class="d-flex ml-1">
+  <div id="manageUsers" class="container">
+    <div class="row ml-2 mt-2">
+      <div class="col-sm-6 form-inline headerName">
+        <img alt="" src="../../assets/images/ManageUsers.png" class="headerImage m-1">
+        <h5 class="ml-3">User Contact List</h5>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered table-striped shadow-sm mt-1 bg-white rounded" cellspacing="0">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact Number</th>
+            <th>Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of contactList">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.contact}}</td>
+            <td>{{user.comment}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="loader"></div>
+    <div class="row mt-1 mb-2">
+      <div class="col records font-weight-bold" *ngIf="contactList">
+        {{ contactList.length }} records found
+      </div>
+      <div class="col text-muted" *ngIf="!contactList">
+        <small>0 records found</small>
+      </div>
+    </div>
+  </div>
+</div>

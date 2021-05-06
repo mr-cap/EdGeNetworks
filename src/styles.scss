@@ -1,0 +1,70 @@
+.headerName {
+  color: #481970 !important;
+}
+.headerImage {
+  width: 3.5em;
+  height: auto;
+}
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 0.9rem !important;
+}
+.nav-pills .nav-link.active {
+  color: #fff !important;
+  background-color: orange !important;
+  font-weight: bold !important;
+  padding-top: 0.3em !important;
+  padding-bottom: 0.3em !important;
+}
+.input-group > .custom-select:not(:last-child),
+.input-group > .form-control:not(:last-child) {
+  border-top-right-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+}
+.remote-modal {
+  min-height: 10rem;
+}
+.modal-header {
+  background-color: #481970;
+  color: white !important;
+}
+.table td {
+  vertical-align: middle !important;
+}
+table {
+  background-color: white !important;
+}
+thead {
+  background-color: #d0bde0 !important;
+}
+tbody tr:hover td {
+  background-color: rgb(255, 199, 95) !important;
+  cursor: pointer;
+}
+label {
+  font-weight: 500 !important;
+  margin-bottom: auto !important;
+}
+textarea:read-only,
+input:read-only {
+  background-color: white !important;
+}
+.input-group > .form-control:not(:last-child) {
+  width: 90px;
+}
+.btn-info {
+  background-color: #481970 !important;
+}
+.records {
+  color: #481970 !important;
+}
+.headerName {
+  color: #481970 !important;
+}
+.headerImage {
+  width: 3.5em;
+  height: auto;
+}
+select {
+  cursor: pointer !important;
+}

@@ -1,0 +1,278 @@
+
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8 mx-auto pb-3">
+        <div class="row">
+          <div class="col-sm-6 form-inline headerName py-3">
+            <img alt="" src="../../assets/images/contact1.png" class="headerImage m-1">
+            <h5 class="ml-3">Contact Us</h5>
+          </div>
+        </div>
+        <div class="shadow-lg mt-1 bg-white rounded">
+          <div class="row  pt-2">
+            <div class="col mx-auto">
+              <div class="loader" *ngIf="loadingContent == true"></div>
+              <form  [formGroup]="addContactForm" (ngSubmit)="onSubmit()" novalidate
+                  >
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 mx-auto text-center">
+                        <div class="form-group mx-5 pt-4 pb-2 mt-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="firstName" style="float: left;"
+                                >First Name:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="firstName"
+                                id="firstName"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="form-group mx-5 pb-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="lastName" style="float: left;"
+                                >Last Name:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="lastName"
+                                id="lastName"
+                                class="form-control"
+                                        autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-5 pb-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="contact" style="float: left;"
+                                >Mobile Number:</label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="number"
+                                formControlName="contact"
+                                id="contact"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-5 pb-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="email" style="float: left;"
+                                >Email Address:</label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="email"
+                                formControlName="email"
+                                id="email"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-5 pb-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="comment" style="float: left;"
+                                >Comments:</label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <textarea
+                                type="text"
+                                formControlName="comment"
+                                id="comment"
+                                class="form-control"
+                                autocomplete="off" rows="4" cols="0"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 mx-auto text-center" >
+                      <fieldset class="form-group border p-3 mx-3">
+                        <legend class="w-auto" style="text-align:left">Address</legend>
+                        <div class="form-group mx-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div  class="col-lg-4 col-md-4 col-sm-4 mr-0 pr-0 pl-0 mb-2">
+                                <label for="address1" style="float: left;"
+                                >House/Flat No:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="address1"
+                                id="address1"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="address2" style="float: left;"
+                                >Street:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="address2"
+                                id="address2"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="state" style="float: left;"
+                                >State:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <select
+                                  class="form-control form-control-sm"
+                                  formControlName="state"
+                                  id="state"
+                                >
+                                  <option *ngFor="let c of stateData" [ngValue]="c.name">
+                                    {{ c.name }}
+                                  </option>
+                                </select>
+                                <!-- <input
+                                type="text"
+                                formControlName="state"
+                                id="state"
+                                class="form-control"
+                                autocomplete="off"
+                              /> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="city" style="float: left;"
+                                >City:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="city"
+                                id="city"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="country" style="float: left;"
+                                >Country:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="country"
+                                id="country"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mx-2">
+                          <div class="input-group">
+                            <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-4 align-self-center mr-0 pr-0 pl-0 mb-2">
+                                <label for="pin" style="float: left;"
+                                >Zip Code:<span style="color: red">*</span></label
+                                >
+                              </div>
+                              <div class="col-lg-8 col-md-8 col-sm-8 ml-0 pl-0">
+                                <input
+                                type="text"
+                                formControlName="pin"
+                                id="pin"
+                                class="form-control"
+                                autocomplete="off"
+                              />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="row mt-0">
+                    <div class="col-lg-4 col-md-4 col-sm-4 mb-2 text-right ml-auto mr-4">
+                      <button type="reset" class="btn btn-danger mr-2">
+                        Cancel
+                      </button>
+                      <button
+                        type="submit"
+                        class="btn btn-info shadow-sm"
+                        [disabled]="!addContactForm.valid"
+                      > Update
+                      </button>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
